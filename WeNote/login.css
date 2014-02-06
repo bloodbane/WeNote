@@ -1,0 +1,34 @@
+body{
+    width: 270px;
+}
+
+input {
+  max-width: 251px;
+  width: 251px;
+  height: 30px;
+}
+#block{
+  background-color:#999;
+  box-shadow: inset 1 0px #000000;
+}
+div{
+  text-align: center;
+}
+
+#login {
+  background-color: #FF0000;
+  box-shadow: inset 0 1px #33CC78;
+  font-family: "GothamBold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  height: 30px;
+}
+#reg {
+  background-color: #209BC9;
+  box-shadow: inset 0 1px #48C0ED;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  outline: none;
+}

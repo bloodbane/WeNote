@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>WeNote: Your Notelist</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <script src="input.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageone" data-theme = "b">
+ 	<div data-role="header" data-position="fixed">
+	 	<a href="#popupFind" data-rel="popup" data-icon="star" data-theme="b" data-transition="pop" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" aria-haspopup="true" aria-owns="#popupBasic">Find</a>
+	 	<div data-role="popup" id="popupFind" data-theme="none">
+    		<div data-role="collapsible-set" data-theme="b" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        		<div data-role="collapsible" data-inset="false">
+                    <h2>Find Friends</h2>
+                    <ul data-role="listview">
+                        <h2>
+                            <label for="basic">Friend Name:
+                            </label>
+                        </h2>
+                        <input type="text" name="name"  id="basic" value="" />
+                        <button id="find" type="submit" data-theme="b" data-icon="plus">Find</button>
+                     </ul>
+                </div><!-- /collapsible -->
+    		</div>
+    	</div>
+    	<h1>Your Note List</h1>
+    	<a href="#popupNested" data-rel="popup" data-icon="grid" data-theme="b" data-transition="pop">Friends</a>
+    	<div data-role="popup" id="popupNested" data-theme="none">
+    		<div data-role="collapsible-set" data-theme="b" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        		
+            			<ul id="friendlist" data-role="listview">
+			            </ul>
+    		    </div><!-- /collapsible -->
+    		</div>
+    	</div>
+  	</div>
+
+
+	<div data-role="content">
+		
+		<p>
+		</p>
+		<div style="width:1000px;margin:0 auto;text-align:center">
+ 			<ul id="comments" data-role="listview" data-filter="true" data-filter-placeholder="Search title or time..." data-split-icon="gear" data-split-theme="d" data-inset="true" data-theme="none">
+
+			</div>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+    	<h1></h1>
+	</div>
+</div>
+
+</body>
+</html>

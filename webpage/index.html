@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+<head profile="http://www.w3.org/2005/10/profile">
+	<link rel="shortcut icon" href="/favicon.ico" >
+	<title>Welcome to WeNote</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script src="login.js"></script>
+	
+</head> 
+<body>
+<div data-role="page" id="pageone" data-theme = "b">
+ 	<div data-role="header" data-position="fixed">
+    	<h1>Welcome to WeNote</h1>
+  	</div>
+
+	<div data-role="content">
+		<p>
+		</p>
+		<div align="center">
+			<a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="Takingnote.jpg" alt="Paris, France" style="width:30%"></a>
+			<a href="#popupSydney" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="reading.jpg" alt="Sydney, Australia" style="width:30%"></a>
+			<a href="#popupNYC" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="share.jpg" alt="New York, USA" style="width:30%"></a>
+		</div>
+		<p>
+		</p>
+		<div class="ui-body ui-body-b">
+			<div align="center">
+				<h1>Note it, comment it, share it</h1>
+			</div>
+			<p>Using our Chrome plug-in, you can easily note what you like and access it anywhere anytime. Join WeNote, get more close to your own Internet!
+			 We have present your notebook for you
+			</p>
+			<div align="center">
+			<p>
+				<h3>        Returning User? Welcome back!
+				<a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
+					<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+					    <form id="loginform" action="">
+    					    <div style="padding:10px 20px;">
+    	    				    <h3>Please sign in</h3>
+                                
+    	    				    <label for="un" class="ui-hidden-accessible">Username:</label>
+        	    				<input type="text" name="user" id="login-username" value="" placeholder="username" data-theme="a">
+       		     				<label for="pw" class="ui-hidden-accessible">Password:</label>
+        	   					<input type="password" name="pass" id="login-password" value="" placeholder="password" data-theme="a">
+        	    				<button id="login" type="submit" data-theme="b" data-icon="plus">Sign in</button>
+					        </div>
+					    </form>
+				</div>	
+				</h3>
+                <p id="banner"></p>
+			</p>
+			<p>
+				<h3> New to WeNote? Register now!
+				
+				<a href="#regpopupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="plus" data-theme="a" data-transition="pop">Sign up</a>
+					<div data-role="popup" id="regpopupLogin" data-theme="a" class="ui-corner-all">
+    					<form>
+					        <div style="padding:10px 20px;">
+            					<h3>Please sign up</h3>
+                                
+            					<label for="un" class="ui-hidden-accessible">Username:</label>
+            					<input type="text" name="userreg" id="regun" value="" placeholder="username" data-theme="a">
+            					<label for="pw" class="ui-hidden-accessible">Password:</label>
+            					<input type="password" name="passreg" id="regpw" value="" placeholder="password" data-theme="a">
+            					<label for="pw" class="ui-hidden-accessible">Repeat Password:</label>
+            					<input type="password" name="passregrep" id="regpwrep" value="" placeholder="repeat password" data-theme="a">
+            					<button id="register" type="submit" data-theme="b" data-icon="plus">Sign up</button>
+                                
+			 	       		</div>
+			    		</form>
+				</div>	
+				</h3>
+                <p id="rbanner"></p>
+			</p>
+			</div>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+    	<h1></h1>
+	</div>
+
+
+</body>
+</html>

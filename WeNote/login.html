@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to WeNote</title>
+        <style>
+
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="jquery-1.10.2.min.js"></script>
+            <link type="text/css" rel="stylesheet" href="login.css"></link>
+            <script src ="login.js"></script>
+    </head>
+    <body>
+        <div id = "block">
+        <div data-role="header" data-position="fixed">
+            <h align="center">Welcome to WeNote</h>
+        </div>
+        <div data-role="page" id="pageone" data-theme = "b">
+            <br \>
+            <div data-role="content">
+                <!-- <div data-role="collapsible">
+                 New to WeNote? Register Now!
+                 </div>g
+                 <div data-role="collapsible">
+                 Returning User? Login Now!
+                 </div> -->
+                <div class="ui-body ui-body-b">
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                        <h4>Returning User? Login now!</h4>
+                        <p id="banner"></p>
+                        <p>
+                            <input type="text" name="textinput-hide" id="login-username" placeholder="User Name" value="">
+                        </p>
+                        <p>
+                            <input type="text" name="textinput-hide" id="login-password" placeholder="Password" value="">
+                        </p>
+                        <p>
+                            <input id="login" type="button" value="Login"/>
+                        </p>
+                        <p>
+                            <input id="reg" type="button" value="Register"/>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1></h1>
+            </div>
+        </div>
+        </div>
+     <!--
+        <script>
+            
+            function get1() {
+                $('document').ready(function(){
+                var username=document.getElementById("login-username").value;
+                var pass=document.getElementById("login-password").value;
+                var request = "http://localhost:8080/wenote/login?";
+                $.getJSON( request, {
+                          user_name: username,
+                          password: pass
+                          })
+                          .done(function( data ) {
+                                document.write(data);
+                                    });
+                /*
+                $.get( "http://localhost:8080/wenote/login", { user_name: "John", password: "2pm" } )
+                .done(function( data ) {
+                      alert( "Data Loaded: " + data );
+                      });
+
+                
+                $.ajax({
+                       type:"GET" ,
+                       url:"http://172.26.34.206:8080/wenote/login",
+                       data:{user_name:"test",password:"123456"}
+                })
+                 .done(function( data ) {
+                       alert(data);
+                })
+                .fail(function( jqXHR, textStatus ) {
+                      alert( "Request failed: " + textStatus );
+                      });
+                //document.write("a");
+                });
+                 */
+                                    });
+            }
+                 
+        document.addEventListener('DOMContentLoaded', function ()
+        {
+            document.getElementById('login').addEventListener('click', get1);
+        });
+        </script>
+      --->
+    </body>
+</html>
