@@ -1,0 +1,101 @@
+INTRODUCTION
+——————
+This is the backend of our service. It provides RESTful API for access management, note management, and user management. This is implemented using Spring Frame. For testing, you can run the jar file provided by us. Or we have deployed one in an EC2 instance (http://54.227.7.141/).
+
+
+How to run
+—————————
+java -jar gs-rest-service-0.1.0.jar
+
+
+
+Data Structure
+————
+To fulfill the tasks, we store our data in DynamoDB, which is a NoSQL database that provide fast access and can scale well. We designed two table, Note and User. The schema of each table is shown as following.
+
+Note:
+	String userName;	//user name who post this note
+	String url;		//each note is related to a url
+	String id;		//id of user, global unique
+	String changeDate;	//date of change
+
+	String title;		//title of note
+	String content;		//content of note
+
+User:
+	String userName;	
+	String password;
+	String friends;		//list of friends with structure
+				//“friend1,friend2,friend3”
+
+
+
+RSST Api
+—————————
+
+1. create new user
+
+localhost:8080/wenote/newuser?user_name=test&password=11111
+
+return “true” for success, “false” for fail
+
+
+2. login
+
+localhost:8080/wenote/login?user_name=test&password=11111
+
+return “true” for success, “false” for fail
+
+
+3. get all notes for a user
+
+localhost:8080/wenote/notes?user_name=admin
+
+return a list of note from the user
+
+
+
+4. get notes for user in a specified url
+
+localhost:8080/wenote/notes?user_name=admin&url=nyu.edu
+
+return a list of note from the user and its friends
+
+
+
+5. create note
+
+localhost:8080/wenote/post?user_name=admin&url=nyu.edu&title=hello&content=nothing
+
+return “true” for success, “false” for fail
+
+
+
+6. update note
+
+localhost:8080/wenote/update?user_name=admin&id=290ca334-9aa8-41e3-a2c9-774f9676559a&title=new title&content=new content
+
+
+return “true” for success, “false” for fail
+
+
+7. add friend
+
+54.227.7.141/:8080/wenote/addfriend?user_name=test&friend=test1
+
+will check if user_name and frien exist in system
+return “true” for success, “false” for fail
+
+
+8. list friend
+54.227.7.141:8080/wenote/listfriend?user_name=test
+
+return a list of friend names
+
+
+9. delete friend
+54.227.7.141:8080/wenote/deletefriend?user_name=test&friend=test1
+
+return “true” for success, “false” for fail
+
+

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Start-Class: com.wenote.rest.Application
+Spring-Boot-Version: 0.5.0.M6
+Main-Class: org.springframework.boot.loader.JarLauncher
+
